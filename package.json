@@ -1,0 +1,7 @@
+{
+  "name": "campus-fit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Explainable, local-first job matching and skill-gap planning for campus placements.",
+  "scripts": { "start": "node server.js" }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0"><title>CampusFit — placement prep, made explainable</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">c</span> campusfit</a><span class="top-note"><i></i> Private by design · Runs on your laptop</span></header>
+  <main>
+    <section class="hero"><div class="eyebrow">A calmer way to prepare</div><h1>Make your next<br><em>move make sense.</em></h1><p>See how your experience lines up with a role, then turn the gaps into a plan you can actually follow.</p></section>
+    <section class="workspace">
+      <form id="form" class="inputs">
+        <div class="panel-head"><div><span class="step">01 / YOUR INPUTS</span><h2>Start with the basics</h2></div><button class="text-button" id="loadExample" type="button">Load an example ↗</button></div>
+        <label for="resume">Your experience <span>Resume text or skills</span></label><textarea id="resume" rows="7" placeholder="Paste resume text, or list skills you can confidently discuss..."></textarea>
+        <label for="job">A role you want <span>Job description</span></label><textarea id="job" rows="7" placeholder="Paste the role description here..."></textarea>
+        <div class="privacy"><span>⌑</span><span>Your text stays on this machine. Nothing is sent to an AI service.</span></div>
+        <button class="primary" type="submit">Find my fit <span>→</span></button>
+        <p class="error" id="error" role="alert"></p>
+      </form>
+      <section class="results" aria-live="polite">
+        <div class="panel-head"><div><span class="step">02 / YOUR READOUT</span><h2>Clarity, not a verdict</h2></div><span class="sparkle">✳</span></div>
+        <div id="empty" class="empty"><div class="empty-icon">✳</div><h3>Your next step starts here.</h3><p>Add your experience and a role. We’ll show what already fits and what to work on next.</p><div class="empty-foot"><span>01</span> Evidence from your text <b>·</b><span>02</span> A practical study path</div></div>
+        <div id="output" class="output hidden">
+          <div class="score-row"><div><span class="muted">SKILL COVERAGE</span><div class="score"><span id="score">0</span><small>%</small></div></div><div class="score-caption" id="scoreCaption"></div></div>
+          <div class="bar"><div id="barFill"></div></div>
+          <p class="method" id="method"></p>
+          <div class="skill-block"><h3>Already in your toolkit <span id="matchedCount"></span></h3><div id="matched" class="chips"></div></div>
+          <div class="skill-block"><h3>Worth building next <span id="missingCount"></span></h3><div id="missing" class="chips"></div></div>
+          <div class="plan-head"><div><span class="step">YOUR SHORT STUDY PLAN</span><h3>Turn gaps into momentum</h3></div></div><div id="plan" class="plan"></div>
+          <p class="note">A skills checklist is a starting point, not a hiring prediction. Review each match and only claim skills you can explain.</p>
+        </div>
+      </section>
+    </section>
+    <footer><span>Built for students finding their footing.</span><span>LOCAL-FIRST · EXPLAINABLE · NO MAGIC SCORE</span></footer>
+  </main><script src="/app.js"></script>
+</body></html>
